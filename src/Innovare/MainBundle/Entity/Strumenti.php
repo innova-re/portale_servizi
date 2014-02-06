@@ -199,4 +199,9 @@ class Strumenti
     {
         return $this->idLaboratorio;
     }
+
+    public function __toString()
+    {
+        return $this->modello;
+    }
 }

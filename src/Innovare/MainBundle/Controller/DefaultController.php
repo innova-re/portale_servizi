@@ -3,6 +3,8 @@
 namespace Innovare\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Innovare\MainBundle\Entity\Laboratorio;
+use Innovare\MainBundle\Form\LaboratorioType;
 
 class DefaultController extends Controller
 {
@@ -11,12 +13,22 @@ class DefaultController extends Controller
 		return $this->render('InnovareMainBundle:Default:index.html.twig', array('name' => $name));
     }
 
-    public function addAction()
+    public function addLaboratorioAction()
     {
+    	$em = $this->getDoctrine()->getManager();
+    	$form = $this->createForm(new LaboratorioType(), new Laboratorio());
+    	$request = $this->getRequest();
 
-    	$fomr = $this->createForm
-		return $this->render('InnovareMainBundle:Default:add.html.twig', array(
+		if($request->isMethod("post")){
+                $form->bind($request);
+                $em->persist($form->getData());
+                $em->flush();
 
+                return $this->redirect($this->generateUrl("innovare_main_addLaboratorio"));
+        }
+
+		return $this->render('InnovareMainBundle:Default:addLaboratorio.html.twig', array(
+			'form' => $form->createView(),
 		));
     }
 }

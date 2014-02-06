@@ -92,4 +92,9 @@ class Ente
     {
         return $this->descrizione;
     }
+
+    public function __toString()
+    {
+        return $this->descrizione;
+    }
 }

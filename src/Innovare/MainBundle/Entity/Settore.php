@@ -92,4 +92,9 @@ class Settore
     {
         return $this->settoreTresto;
     }
+
+    public function __toString()
+    {
+        return $this->settoreTresto;
+    }
 }
