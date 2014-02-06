@@ -10,4 +10,7 @@
 /bin/
 /composer.phar
 composer.lock
+app/Resources/java/
+web/assetic
+web/css
 *~
