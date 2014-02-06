@@ -1,0 +1,37 @@
+Innovare\MainBundle\Entity\XLabStrumFuturi:
+    type: entity
+    table: x_lab_strum_futuri
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idLaboratorio:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: id_laboratorio
+        tipologia:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: 'Preso dalla tipologia strumenti'
+        quantita:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        finalita:
+            type: string
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,47 @@
+Innovare\MainBundle\Entity\Strumenti:
+    type: entity
+    table: strumenti
+    id:
+        idStrumento:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_strumento
+            generator:
+                strategy: IDENTITY
+    fields:
+        tipologia:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        marca:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        modello:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        equipaggiamento:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    manyToMany:
+        idLaboratorio:
+            targetEntity: Laboratorio
+            cascade: {  }
+            mappedBy: idStrumento
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

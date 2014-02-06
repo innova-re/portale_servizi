@@ -1,0 +1,44 @@
+Innovare\MainBundle\Entity\XLabAreaMiur:
+    type: entity
+    table: x_lab_area_miur
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idLaboratorio:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: id_laboratorio
+        idArea:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: id_area
+        idSettore:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: id_settore
+        miurArea:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: miur_area
+        ssd:
+            type: string
+            nullable: false
+            length: 15
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

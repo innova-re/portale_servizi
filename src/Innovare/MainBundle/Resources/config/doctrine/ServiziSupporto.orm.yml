@@ -1,0 +1,21 @@
+Innovare\MainBundle\Entity\ServiziSupporto:
+    type: entity
+    table: servizi_supporto
+    id:
+        idServiziSupp:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_servizi_supp
+            generator:
+                strategy: IDENTITY
+    fields:
+        descrizione:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

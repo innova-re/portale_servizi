@@ -1,0 +1,52 @@
+Innovare\MainBundle\Entity\Strumentilab:
+    type: entity
+    table: strumentilab
+    indexes:
+        FK_strumentilab_1:
+            columns:
+                - id_laboratorio
+    id:
+        idStrumento:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_strumento
+            generator:
+                strategy: IDENTITY
+    fields:
+        tipologia:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        marca:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        modello:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        equipaggiamento:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+    manyToOne:
+        idLaboratorio:
+            targetEntity: Laboratorio
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_laboratorio:
+                    referencedColumnName: id_laboratorio
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

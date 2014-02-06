@@ -1,0 +1,52 @@
+Innovare\MainBundle\Entity\LaboratorioHasAfferenza:
+    type: entity
+    table: laboratorio_has_afferenza
+    indexes:
+        FK_laboratorio_has_afferenza_1:
+            columns:
+                - id_laboratorio
+        FK_laboratorio_has_afferenza_2:
+            columns:
+                - id_afferenza
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nome:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        descrizione:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+    manyToOne:
+        idAfferenza:
+            targetEntity: Afferenza
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_afferenza:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idLaboratorio:
+            targetEntity: Laboratorio
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_laboratorio:
+                    referencedColumnName: id_laboratorio
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

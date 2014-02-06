@@ -1,0 +1,27 @@
+Innovare\MainBundle\Entity\Afferenza:
+    type: entity
+    table: afferenza
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nome:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+        descrizione:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

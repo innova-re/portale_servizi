@@ -1,0 +1,55 @@
+Innovare\MainBundle\Entity\XLabUtilizzatori:
+    type: entity
+    table: x_lab_utilizzatori
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idLaboratorio:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: id_laboratorio
+        professori:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        ricercatori:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: 'Percentuale di tempo '
+        tecnici:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        assegnisti:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        borsisti:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        laureandi:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        studenti:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }
