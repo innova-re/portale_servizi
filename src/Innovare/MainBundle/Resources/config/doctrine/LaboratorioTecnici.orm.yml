@@ -1,0 +1,60 @@
+Innovare\MainBundle\Entity\LaboratorioTecnici:
+    type: entity
+    table: laboratorio_tecnici
+    indexes:
+        FK_laboratorio_tecnici_1:
+            columns:
+                - id_laboratorio
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nome:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+            default: ''
+        cognome:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+            default: ''
+        matricola:
+            type: string
+            nullable: true
+            length: 20
+            fixed: false
+            comment: ''
+        descrizione:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        note:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+    manyToOne:
+        idLaboratorio:
+            targetEntity: Laboratorio
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_laboratorio:
+                    referencedColumnName: id_laboratorio
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

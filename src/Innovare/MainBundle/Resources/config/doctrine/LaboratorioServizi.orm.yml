@@ -1,0 +1,48 @@
+Innovare\MainBundle\Entity\LaboratorioServizi:
+    type: entity
+    table: laboratorio_servizi
+    indexes:
+        FK_laboratorio_servizi_1:
+            columns:
+                - id_laboratorio
+    id:
+        idServizi:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_servizi
+            generator:
+                strategy: IDENTITY
+    fields:
+        nome:
+            type: string
+            nullable: false
+            length: 200
+            fixed: false
+            comment: ''
+            default: ''
+        descrizione:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+        note:
+            type: string
+            nullable: true
+            length: 200
+            fixed: false
+            comment: ''
+    manyToOne:
+        idLaboratorio:
+            targetEntity: Laboratorio
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_laboratorio:
+                    referencedColumnName: id_laboratorio
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

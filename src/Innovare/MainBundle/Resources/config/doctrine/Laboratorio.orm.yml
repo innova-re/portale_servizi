@@ -1,0 +1,199 @@
+Innovare\MainBundle\Entity\Laboratorio:
+    type: entity
+    table: laboratorio
+    indexes:
+        id_settore_idx:
+            columns:
+                - id_settore
+        FK_laboratorio_2:
+            columns:
+                - id_ente
+        FK_laboratorio_3:
+            columns:
+                - id_afferenza
+    id:
+        idLaboratorio:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: id_laboratorio
+            generator:
+                strategy: IDENTITY
+    fields:
+        nome:
+            type: string
+            nullable: false
+            length: 250
+            fixed: false
+            comment: ''
+        centro:
+            type: string
+            nullable: true
+            length: 2
+            fixed: false
+            comment: 'CA-UniCA SS-Sassari SR-Sardegna Ricerche'
+        afferenza:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: 'CeSAR - Polilab - Altro'
+        facolta:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        dipartimento:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        sezione:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        sede:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        sedeCitta:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+            column: sede_citta
+        gpsLat:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 7
+            comment: ''
+            column: gps_lat
+        gpsLng:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 7
+            comment: ''
+            column: gps_lng
+        ubicazione:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: 'ubicazione precisa della stanza'
+        descrizione:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: 'breve descrizione discorsiva con rif. alle att. svolte '
+        telefono:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        web:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+        info:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        responsabile:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: id_anagrafica
+        referente:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: id_anagrafica
+        attivitaEsterna:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: attivita_esterna
+        attivitaEsternaTipol:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+            column: attivita_esterna_tipol
+        regolamAccesso:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: regolam_accesso
+        regolamAccessoAtti:
+            type: string
+            nullable: true
+            length: 250
+            fixed: false
+            comment: ''
+            column: regolam_accesso_atti
+    manyToOne:
+        idSettore:
+            targetEntity: Settore
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_settore:
+                    referencedColumnName: id_settore
+            orphanRemoval: false
+        idEnte:
+            targetEntity: Ente
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_ente:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idAfferenza:
+            targetEntity: Afferenza
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_afferenza:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToMany:
+        idStrumento:
+            targetEntity: Strumenti
+            cascade: {  }
+            mappedBy: null
+            inversedBy: idLaboratorio
+            joinTable:
+                name: laboratorio_strumenti
+                joinColumns:
+                    -
+                        name: id_laboratorio
+                        referencedColumnName: id_laboratorio
+                inverseJoinColumns:
+                    -
+                        name: id_strumento
+                        referencedColumnName: id_strumento
+            orderBy: null
+    lifecycleCallbacks: {  }
