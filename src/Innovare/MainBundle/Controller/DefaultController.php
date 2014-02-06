@@ -10,7 +10,7 @@ class DefaultController extends Controller
 {
     public function indexAction($name)
     {
-		return $this->render('InnovareMainBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('InnovareMainBundle:Default:index.html.twig', array('name' => $name));
     }
 
     public function addLaboratorioAction()
@@ -19,12 +19,12 @@ class DefaultController extends Controller
     	$form = $this->createForm(new LaboratorioType(), new Laboratorio());
     	$request = $this->getRequest();
 
-		if($request->isMethod("post")){
-                $form->bind($request);
-                $em->persist($form->getData());
-                $em->flush();
+        if($request->isMethod("post")){
+            $form->bind($request);
+            $em->persist($form->getData());
+            $em->flush();
 
-                return $this->redirect($this->generateUrl("innovare_main_addLaboratorio"));
+            return $this->redirect($this->generateUrl("innovare_main_addLaboratorio"));
         }
 
 		return $this->render('InnovareMainBundle:Default:addLaboratorio.html.twig', array(
