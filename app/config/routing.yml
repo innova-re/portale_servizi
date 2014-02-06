@@ -1,0 +1,4 @@
+innovare_main:
+    resource: "@InnovareMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
