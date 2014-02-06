@@ -1,3 +1,7 @@
 innovare_main_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: InnovareMainBundle:Default:index }
+
+innovare_main_add:
+    pattern:  /add
+    defaults: { _controller: InnovareMainBundle:Default:add }
