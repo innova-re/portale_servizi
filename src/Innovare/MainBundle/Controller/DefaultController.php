@@ -13,6 +13,8 @@ class DefaultController extends Controller
 
     public function addAction()
     {
+
+    	$fomr = $this->createForm
 		return $this->render('InnovareMainBundle:Default:add.html.twig', array(
 
 		));
