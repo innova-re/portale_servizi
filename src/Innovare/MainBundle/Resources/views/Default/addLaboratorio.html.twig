@@ -2,19 +2,20 @@
 
 {% block inner_content %}
 <form class="form-horizontal" action="" method="POST">
-
-	{% block form_row %}
-	    {% spaceless %}
-	        <div class="control-group">
-	            {{ form_label(form, '', { 'label_attr': {'class': 'control-label'} }) }}
-	            <div class="controls">
-	                {% form_theme form _self %}
-	                {{ form_widget(form) }}
-	            </div>
-	            {{ form_errors(form) }}
-	        </div>
-	    {% endspaceless %}
-	{% endblock form_row %}
-
+	<fieldset>
+		{% block form_row %}
+		    {% spaceless %}
+		        <div class="control-group">
+		            {{ form_label(form, '', { 'label_attr': {'class': 'control-label'} }) }}
+		            <div class="controls">
+		                {% form_theme form _self %}
+		                {{ form_widget(form) }}
+		            </div>
+		            {{ form_errors(form) }}
+		        </div>
+		    {% endspaceless %}
+		{% endblock form_row %}
+		<button type="submit" class="btn">Submit</button>
+	</fieldset>
 </form>
 {% endblock %}
