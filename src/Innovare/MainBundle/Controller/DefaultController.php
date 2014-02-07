@@ -17,7 +17,7 @@ class DefaultController extends Controller
         return $this->render('InnovareMainBundle:Default:index.html.twig', array('name' => $name));
     }
 
-    public function addLaboratorioAction($name)
+    public function addAction($name)
     {
     	$em = $this->getDoctrine()->getManager();
 
@@ -40,7 +40,7 @@ class DefaultController extends Controller
             $em->persist($form->getData());
             $em->flush();
 
-            return $this->redirect($this->generateUrl("innovare_main_addLaboratorio"));
+            return $this->redirect($this->generateUrl("innovare_main_add"));
         }
 
 		return $this->render('InnovareMainBundle:Default:add.html.twig', array(
