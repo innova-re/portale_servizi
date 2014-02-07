@@ -43,7 +43,7 @@ class DefaultController extends Controller
             return $this->redirect($this->generateUrl("innovare_main_addLaboratorio"));
         }
 
-		return $this->render('InnovareMainBundle:Default:addLaboratorio.html.twig', array(
+		return $this->render('InnovareMainBundle:Default:add.html.twig', array(
 			'form' => $form->createView()
 		));
     }
