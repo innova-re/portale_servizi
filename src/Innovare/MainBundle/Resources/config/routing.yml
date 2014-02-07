@@ -3,5 +3,5 @@ innovare_main_homepage:
     defaults: { _controller: InnovareMainBundle:Default:index }
 
 innovare_main_addLaboratorio:
-    pattern:  /addLaboratorio
+    pattern:  /addLaboratorio/{name}
     defaults: { _controller: InnovareMainBundle:Default:addLaboratorio }

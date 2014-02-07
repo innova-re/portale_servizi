@@ -816,4 +816,9 @@ class Laboratorio
     {
         return $this->idStrumento;
     }
+
+    public function __toString()
+    {
+        return $this->regolamAccessoAtti;
+    }
 }
