@@ -1,7 +1,7 @@
 {% extends "::base.html.twig" %}
 
 {% block inner_content %}
-<form class="form-horizontal" action="" method="POST">
+<form class="form-horizontal" action="{{ path("innovare_main_add", { 'name': 'Laboratorio' }) }}" method="POST">
 	<fieldset>
 		{% block form_row %}
 		    {% spaceless %}

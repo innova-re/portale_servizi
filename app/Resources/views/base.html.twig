@@ -6,6 +6,7 @@
         {% block stylesheets %}
              {% stylesheets '@bootstrap_less' combine=true %}
                 <link href="{{ asset_url }}" type="text/css" rel="stylesheet">
+                <link rel="stylesheet" type="text/css" href="{{ asset('bundles/innovaremain/css/main.css') }}">
              {% endstylesheets %}
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
