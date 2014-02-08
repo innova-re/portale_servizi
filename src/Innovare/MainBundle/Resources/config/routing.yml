@@ -5,3 +5,7 @@ innovare_main_homepage:
 innovare_main_add:
     pattern:  /add/{name}
     defaults: { _controller: InnovareMainBundle:Default:add }
+
+innovare_main_afferenza:
+    resource: "@InnovareMainBundle/Controller/AfferenzaController.php"
+    type:     annotation
