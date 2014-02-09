@@ -1,3 +1,4 @@
+.DS_Store
 /web/bundles/
 /web/app_dev.php
 /app/bootstrap.php.cache
@@ -14,4 +15,5 @@ composer.lock
 app/Resources/java/
 web/assetic
 web/css
+src/.DS_Store
 *~
