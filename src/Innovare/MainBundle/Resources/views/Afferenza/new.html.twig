@@ -1,15 +1,11 @@
 {% extends '::base.html.twig' %}
 
 {% block inner_content -%}
-    <h1>Afferenza creation</h1>
+    <h3>Afferenza creation</h3>
 
     {{ form(form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('afferenza') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+    <a class="btn" href="{{ path('afferenza') }}">
+        Back to the list
+    </a>
 {% endblock %}
