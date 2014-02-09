@@ -9,3 +9,7 @@ innovare_main_add:
 innovare_main_afferenza:
     resource: "@InnovareMainBundle/Controller/AfferenzaController.php"
     type:     annotation
+
+innovare_main_ente:
+    resource: "@InnovareMainBundle/Controller/EnteController.php"
+    type:     annotation
