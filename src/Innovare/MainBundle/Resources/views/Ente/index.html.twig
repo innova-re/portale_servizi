@@ -1,9 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block inner_content -%}
-    <h1>Ente list</h1>
-
-    <table class="records_list">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,25 +17,15 @@
                 <td>{{ entity.nome }}</td>
                 <td>{{ entity.descrizione }}</td>
                 <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('ente_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('ente_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
+                    <a class="btn" href="{{ path('ente_show', { 'id': entity.id }) }}">show</a>
+                    <a class="btn" href="{{ path('ente_edit', { 'id': entity.id }) }}">edit</a>
                 </ul>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('ente_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+    <a class="btn" href="{{ path('ente_new') }}">
+        Create a new entry
+    </a>
     {% endblock %}
