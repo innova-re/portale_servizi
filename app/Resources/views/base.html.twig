@@ -77,6 +77,11 @@
 
     </div><!--/.fluid-container-->
         {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+          {% javascripts '@jquery_js' combine=true %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+            <script src="{{ asset('bundles/innovaremain/js/main.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
