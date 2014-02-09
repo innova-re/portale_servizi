@@ -1,16 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block inner_content -%}
-    <h1>Afferenza edit</h1>
+    <h3>Afferenza edit</h3>
 
     {{ form(edit_form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('afferenza') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
+    <a class="btn" href="{{ path('afferenza') }}">
+        Back to the list
+    </a>
+	{{ form(delete_form) }}
 </ul>
 {% endblock %}
