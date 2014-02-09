@@ -1,7 +1,11 @@
 innovare_main_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: InnovareMainBundle:Default:index }
 
 innovare_main_add:
     pattern:  /add/{name}
     defaults: { _controller: InnovareMainBundle:Default:add }
+
+innovare_main_afferenza:
+    resource: "@InnovareMainBundle/Controller/AfferenzaController.php"
+    type:     annotation

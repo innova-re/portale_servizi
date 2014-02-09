@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+
+{% block inner_content -%}
+    <h1>Afferenza</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ entity.nome }}</td>
+            </tr>
+            <tr>
+                <th>Descrizione</th>
+                <td>{{ entity.descrizione }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('afferenza') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('afferenza_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
