@@ -21,3 +21,14 @@ services:
             - ~
         calls:
             - [ setTranslationDomain, [InnovareMainBundle]]
+
+    sonata.admin.laboratorio:
+        class: Innovare\MainBundle\Admin\LaboratorioAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Laboratorio" }
+        arguments:
+            - ~
+            - Innovare\MainBundle\Entity\Laboratorio2
+            - ~
+        calls:
+            - [ setTranslationDomain, [InnovareMainBundle]]
