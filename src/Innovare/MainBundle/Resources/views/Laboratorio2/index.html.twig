@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
-{% block body -%}
-    <h1>Laboratorio2 list</h1>
+{% block inner_content -%}
+    <h3>Laboratorio2 list</h3>
 
-    <table class="records_list">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Id</th>
@@ -73,11 +73,8 @@
         </tbody>
     </table>
 
-        <ul>
-        <li>
-            <a href="{{ path('laboratorio2_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+    <a class="btn" href="{{ path('laboratorio2_new') }}">
+        Create a new entry
+    </a>
+
     {% endblock %}
