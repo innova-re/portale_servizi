@@ -13,3 +13,7 @@ innovare_main_afferenza:
 innovare_main_ente:
     resource: "@InnovareMainBundle/Controller/EnteController.php"
     type:     annotation
+
+innovare_main_laboratorio2:
+    resource: "@InnovareMainBundle/Controller/Laboratorio2Controller.php"
+    type:     annotation
