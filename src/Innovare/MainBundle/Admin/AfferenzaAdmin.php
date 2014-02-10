@@ -1,5 +1,5 @@
 <?php
-// src/Innovare/MainBundle/Admin/EnteAdmin.php
+// src/Innovare/MainBundle/Admin/AfferenzaAdmin.php
 
 namespace Innovare\MainBundle\Admin;
 
@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class EnteAdmin extends Admin
+class AfferenzaAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)

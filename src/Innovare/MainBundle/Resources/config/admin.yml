@@ -1,12 +1,23 @@
 # Innovare/MainBundle/Resources/config/admin.yml
 services:
-    sonata.admin.post:
+    sonata.admin.ente:
         class: Innovare\MainBundle\Admin\EnteAdmin
         tags:
             - { name: sonata.admin, manager_type: orm, group: "Content", label: "Ente" }
         arguments:
             - ~
             - Innovare\MainBundle\Entity\Ente
+            - ~
+        calls:
+            - [ setTranslationDomain, [InnovareMainBundle]]
+
+    sonata.admin.afferenza:
+        class: Innovare\MainBundle\Admin\AfferenzaAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Afferenza" }
+        arguments:
+            - ~
+            - Innovare\MainBundle\Entity\Afferenza
             - ~
         calls:
             - [ setTranslationDomain, [InnovareMainBundle]]
