@@ -1,0 +1,83 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Laboratorio2 list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idsettore</th>
+                <th>Nome</th>
+                <th>Centro</th>
+                <th>Afferenza</th>
+                <th>Facolta</th>
+                <th>Dipartimento</th>
+                <th>Sezione</th>
+                <th>Sede</th>
+                <th>Sedecitta</th>
+                <th>Gpslat</th>
+                <th>Gpslng</th>
+                <th>Ubicazione</th>
+                <th>Descrizione</th>
+                <th>Telefono</th>
+                <th>Web</th>
+                <th>Info</th>
+                <th>Responsabile</th>
+                <th>Referente</th>
+                <th>Attivitaesterna</th>
+                <th>Attivitaesternatipol</th>
+                <th>Regolamaccesso</th>
+                <th>Regolamaccessoatti</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('laboratorio2_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.idSettore }}</td>
+                <td>{{ entity.nome }}</td>
+                <td>{{ entity.centro }}</td>
+                <td>{{ entity.afferenza }}</td>
+                <td>{{ entity.facolta }}</td>
+                <td>{{ entity.dipartimento }}</td>
+                <td>{{ entity.sezione }}</td>
+                <td>{{ entity.sede }}</td>
+                <td>{{ entity.sedeCitta }}</td>
+                <td>{{ entity.gpsLat }}</td>
+                <td>{{ entity.gpsLng }}</td>
+                <td>{{ entity.ubicazione }}</td>
+                <td>{{ entity.descrizione }}</td>
+                <td>{{ entity.telefono }}</td>
+                <td>{{ entity.web }}</td>
+                <td>{{ entity.info }}</td>
+                <td>{{ entity.responsabile }}</td>
+                <td>{{ entity.referente }}</td>
+                <td>{{ entity.attivitaEsterna }}</td>
+                <td>{{ entity.attivitaEsternaTipol }}</td>
+                <td>{{ entity.regolamAccesso }}</td>
+                <td>{{ entity.regolamAccessoAtti }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('laboratorio2_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('laboratorio2_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('laboratorio2_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
