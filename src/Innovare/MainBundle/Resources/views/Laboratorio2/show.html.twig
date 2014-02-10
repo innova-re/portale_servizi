@@ -1,0 +1,116 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Laboratorio2</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Idsettore</th>
+                <td>{{ entity.idSettore }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ entity.nome }}</td>
+            </tr>
+            <tr>
+                <th>Centro</th>
+                <td>{{ entity.centro }}</td>
+            </tr>
+            <tr>
+                <th>Afferenza</th>
+                <td>{{ entity.afferenza }}</td>
+            </tr>
+            <tr>
+                <th>Facolta</th>
+                <td>{{ entity.facolta }}</td>
+            </tr>
+            <tr>
+                <th>Dipartimento</th>
+                <td>{{ entity.dipartimento }}</td>
+            </tr>
+            <tr>
+                <th>Sezione</th>
+                <td>{{ entity.sezione }}</td>
+            </tr>
+            <tr>
+                <th>Sede</th>
+                <td>{{ entity.sede }}</td>
+            </tr>
+            <tr>
+                <th>Sedecitta</th>
+                <td>{{ entity.sedeCitta }}</td>
+            </tr>
+            <tr>
+                <th>Gpslat</th>
+                <td>{{ entity.gpsLat }}</td>
+            </tr>
+            <tr>
+                <th>Gpslng</th>
+                <td>{{ entity.gpsLng }}</td>
+            </tr>
+            <tr>
+                <th>Ubicazione</th>
+                <td>{{ entity.ubicazione }}</td>
+            </tr>
+            <tr>
+                <th>Descrizione</th>
+                <td>{{ entity.descrizione }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ entity.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Web</th>
+                <td>{{ entity.web }}</td>
+            </tr>
+            <tr>
+                <th>Info</th>
+                <td>{{ entity.info }}</td>
+            </tr>
+            <tr>
+                <th>Responsabile</th>
+                <td>{{ entity.responsabile }}</td>
+            </tr>
+            <tr>
+                <th>Referente</th>
+                <td>{{ entity.referente }}</td>
+            </tr>
+            <tr>
+                <th>Attivitaesterna</th>
+                <td>{{ entity.attivitaEsterna }}</td>
+            </tr>
+            <tr>
+                <th>Attivitaesternatipol</th>
+                <td>{{ entity.attivitaEsternaTipol }}</td>
+            </tr>
+            <tr>
+                <th>Regolamaccesso</th>
+                <td>{{ entity.regolamAccesso }}</td>
+            </tr>
+            <tr>
+                <th>Regolamaccessoatti</th>
+                <td>{{ entity.regolamAccessoAtti }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('laboratorio2') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('laboratorio2_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
