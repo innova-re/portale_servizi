@@ -14,8 +14,8 @@ class EnteAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('nome', 'text', array('label' => 'Post Title'))
-            ->add('descrizione', 'text')
+            ->add('nome')
+            ->add('descrizione')
         ;
     }
 
