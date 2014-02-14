@@ -23,7 +23,7 @@ class AppKernel extends Kernel
             new Innovare\MainBundle\InnovareMainBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
-            // new FOS\UserBundle\FOSUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new Innovare\UserBundle\InnovareUserBundle(),
         );
 
