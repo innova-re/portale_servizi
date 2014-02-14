@@ -1,3 +1,0 @@
-innovare_user_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: InnovareUserBundle:Default:index }
