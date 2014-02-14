@@ -1,8 +1,13 @@
+# app/config/routing.yml
+
+innovare_user:
+    resource: "@InnovareUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 innovare_main:
     resource: "@InnovareMainBundle/Resources/config/routing.yml"
     prefix:   /
 
-# app/config/routing.yml
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
     prefix: /admin
